@@ -53,7 +53,7 @@ spec:
     spec: 
       containers:
         - name: ecommerce
-          image: owilsonjunior/ecommerce:v1
+          image: owilsonjunior/ecommerce
           ports:
             - containerPort: 5000
           env: 
