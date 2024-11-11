@@ -23,8 +23,8 @@ jobs:
           push: true
           file: ./src/Dockerfile
           tags: |
-            owilsonjunior/fake-shop:latest
-            owilsonjunior/fake-shop:${{ github.run_number }}
+            owilsonjunior/ecommerce:latest
+            owilsonjunior/ecommerce:${{ github.run_number }}
   cd:
     runs-on: ubuntu-latest
     needs: [ci]
