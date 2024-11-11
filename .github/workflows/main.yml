@@ -1,0 +1,27 @@
+name: DeployEcommerce
+
+on: 
+  push: 
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Autentication Docker hub
+        run: echo "Executando o comando docker login"
+      - name: Build Docker Image
+        run: echo "Executando do comando docker build"
+      - name: Send Docker Image
+        run: echo "Executando o comando docker push"
+
+  cd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Autentication AWS
+        run: echo "Executando o comando aws configure"
+      - name: Kubectl configuration
+        run: echo "Executando o comando aws eks update-kubeconfig"
+      - name: Deploy application in Kubernets
+        run: echo "Executando o comando kubectl apply"
